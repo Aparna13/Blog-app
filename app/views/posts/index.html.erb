@@ -1,0 +1,28 @@
+<h2>Here are the posts</h2>
+<% @posts.each do |post| %>
+<table>
+  <tbody>
+  <thead></thead>
+    <tr>
+      <td>
+         <%= post.title %>
+      </td>
+      <td>
+         <%= post.category %>
+      </td>
+     
+    </tr>
+
+   
+
+  </tbody>
+</table>
+
+
+<p>
+  <%= link_to "See a post", post_path(post),class: "btn btn-default btn-primary"%>
+</p>
+    <% end %>
+<p>
+  <%= link_to "Add a post", new_author_post_path,class: "btn btn-default btn-primary"%>
+</p>

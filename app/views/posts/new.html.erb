@@ -1,0 +1,32 @@
+
+<a href="/authors"><h1>Welcome to Blog lab!</h1> </a> 
+<h2>Add a Post:</h2>
+<% if @post.errors.any? %>
+  <% @post.errors.full_messages.each do |error| %>
+  <p class = "text-danger">
+    <%= error %>
+  </p>
+   <% end %>
+<% end %>
+
+
+<%= bootstrap_form_for([@author, @post],layout: :horizontal) do |f| %>
+  <p>
+
+  <%= f.text_field :title %>
+  </p>
+  <p>
+
+  <%= f.text_field :category %>
+  </p>
+  <p>
+
+  <%= f.text_area(:body, size: '50x10')%>
+  <p>
+  <%= f.submit "Add", class: "btn btn-success col-sm-offset-2 col-sm-2"%>
+  </p>
+  </p>
+<% end %>
+
+
+

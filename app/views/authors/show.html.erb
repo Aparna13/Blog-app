@@ -1,0 +1,18 @@
+<a href="/authors"><h1>Welcome to Blog lab!</h1> </a> 
+<h2>More info on:</h2>
+
+<table align = "left" class="table table-striped table-hover table-condensed">
+  <tbody>
+  <thead></thead>
+    <tr>
+      <td class="col-xs-4">
+  Name: <%= @author.first_name %> <%= @author.last_name %> </td>
+  <td class="col-xs-4"> Age: <%= @author.age %></td>
+  <td class="col-xs-4"><%= link_to "See posts", author_posts_path(@author)%></td>
+
+</tr>
+</tbody>
+</table>
+
+
+<%= link_to "Edit", edit_author_path, class: "btn btn-success col-sm-2"%>
